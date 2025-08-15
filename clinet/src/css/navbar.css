@@ -1,0 +1,114 @@
+.TabBar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    width: max-content;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: var(--accent-transparent);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.navList{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.navList a,
+.navItem{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.navList a{
+    color: var(--color-text-muted);
+    transition: .3s ease;
+}
+.navItem .meta{
+    font-size: calc(var(--fontSize-meta) + 1px);
+    line-height: 1;
+    margin-top: 3px;
+    transition: .3s ease;
+}
+.navList a.active{
+    color: var(--color-text);
+}
+.navList a.active .navItem svg{
+    color: var(--color-text);
+}
+.navList a.active .navItem .meta{
+    font-weight: 600;
+}
+.navList a .navItem .meta{
+    font-weight: 500;
+}
+/* Tablets (usually between 768px and 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS rules for tablets */
+    .TabBar{
+        display: flex;
+    }
+    nav{
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .navList{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+/* Mobile devices (usually up to 767px) */
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    .TabBar{
+        display: flex;
+        padding: 0;
+    }
+    nav{
+        width: 100%;
+        border-radius: 0;
+        box-shadow: unset;
+    }
+    .navList{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+    .navList a{
+        cursor: default;
+    }
+    .navItem{
+        height: 65px;
+    }
+    .navItem svg{
+        transition: .3s ease;
+        color: var(--color-text-muted);
+    }
+}

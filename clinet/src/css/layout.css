@@ -1,0 +1,359 @@
+main{
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+}
+/*Sidebar Layout*/
+aside{
+    flex: .8;
+    height: 100dvh;
+}
+
+/*App Layout Section*/
+#app{
+    position: relative;
+    flex: 3;
+    min-height: 100dvh;
+    overflow-y: scroll;
+}
+#appContainer{
+    margin-top: 100px;
+}
+
+/*Header Layout*/
+header{
+    position: fixed;
+    top: 0;
+    width: calc(100% - 21%);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--accent-transparent);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid var(--color-bg-alt);
+}
+.presetShower{
+    width: max-content;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.LocIndicator{
+    width: max-content;
+}
+.LocIndicator h2{
+    line-height: 1.3;
+}
+.ProgressIndicator{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.circleProgress{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+    border: 2.5px solid var(--accent-blue);
+}
+.meta{
+    font-size: var(--fontSize-meta);
+}
+.accent{
+    color: var(--accent-blue);
+    font-weight: 500;
+}
+
+.profileLocator{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cl-internal-14s4tiz{
+    width: 45px;
+    height: 45px;
+}
+
+/*Footer Layout*/
+footer{
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    background-color: var(--color-bg);
+}
+
+.newsLetter{
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-bg-alt);
+}
+.newsLetterContext{
+    flex: 1;
+    height: auto;
+    padding: 10px 0;
+}
+.newsLetterContext h2{
+    line-height: 1.5;
+    font-size: calc(var(--fontSize-lg) - 3px);
+}
+.newsLetterContext p{
+    line-height: 1.4;
+    font-size: var(--fontSize-meta);
+    color: var(--color-text-muted);
+}
+
+.newsLetterInteract{
+    flex: 1;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsLetterForm{
+    width: 100%;
+    height: 55px;
+    padding: 0 8px;
+    padding-left: 15px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--color-text);
+}
+.newsLetterForm input{
+    width: 100%;
+    height: 100%;
+    font-size: var(--fontSize-base);
+    line-height: 1.5;
+    text-transform: lowercase;
+}
+.newsLetterForm input::placeholder{
+    text-transform: capitalize;
+}
+.newsFormSubmit{
+    padding: 0 30px;
+    padding-top: 2px;
+    height: 40px;
+    font-size: var(--fontSize-base);
+    font-weight: 500;
+    letter-spacing: .3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-green);
+    cursor: pointer;
+    border: 1px solid var(--color-text);
+    transition: .3s ease;
+}
+
+/*footerCover*/
+.footerCover{
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid var(--color-bg-alt);
+}
+.footerLogo,
+.footerUL{
+    flex: 1;
+}
+
+.footerLogo{
+    height: auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Branding{
+    width: fit-content;
+    height: auto;
+}
+.Branding button{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: start;
+}
+.Branding h2{
+    padding: 0 10px;
+    font-size: var(--fontSize-base);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 5px;
+}
+.brandingLocation{
+    width: fit-content;
+    height: auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.brandingLocation .meta{
+    font-size: var(--fontSize-meta);
+    color: var(--color-text-muted);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.footerUL{
+    padding: 10px 10px;
+    padding-bottom: 10px;
+}
+.footerUL h3{
+    width: max-content;
+    padding-right: 10px;
+    font-size: calc(var(--fontSize-lg) - 3px);
+    line-height: 1.5;
+    border-bottom: 1px solid var(--color-text);
+}
+.footerUL ul{
+    padding: 15px 5px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.footerUL ul li{
+    list-style: none;
+    font-size: var(--fontSize-base);
+    line-height: 1.5;
+}
+.footerUL ul li a{
+    color: var(--color-text-muted);
+}
+.footerUL ul li a:hover{
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
+.madeWithLove{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.madeWithLove .meta{
+    width: max-content;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: var(--fontSize-meta);
+}
+.madeWithLove .meta:first-child{
+    color: var(--color-text-muted);
+}
+
+/* Tablets (usually between 768px and 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS rules for tablets */
+    main{
+        display: unset;
+        height: auto;
+    }
+    aside{
+        display: none;
+    }
+    #app{
+        overflow-y: unset;
+    }
+
+    /*header*/
+    header{
+        width: 100%;
+    }
+}
+
+
+/* Mobile devices (usually up to 767px) */
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    main{
+        display: unset;
+        height: auto;
+    }
+    aside{
+        display: none;
+    }
+    #app{
+        overflow-y: unset;
+    }
+
+    /*header*/
+    header{
+        width: 100%;
+        padding: 15px 10px;
+    }
+    .presetShower{
+        width: 70%;
+    }
+    .ProgressIndicator{
+        width: fit-content;
+    }
+    .circleProgress{
+        display: none;
+    }
+    .cl-internal-14s4tiz{
+        cursor: default;
+        width: 38px;
+        height: 38px;
+    }
+
+    /*footer*/
+    footer{
+        padding: 20px 10px;
+        margin-bottom: 60px;
+    }
+    .newsLetter{
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    .newsLetterContext{
+        padding: 15px 0;
+    }
+    .newsLetterInteract{
+        padding: 5px 0;
+        width: 100%;
+    }
+    .newsFormSubmit{
+        padding: 0 20px;
+    }
+    
+    .footerCover{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .footerLogo{
+        gap: 30px;
+    }
+
+    .madeWithLove .meta{
+        width: fit-content;
+        text-align: center;
+        font-size: calc(var(--fontSize-base) - 2px);
+    }
+    .madeWithLove .meta:first-child{
+        color: var(--color-text);
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,178 @@
+#home{
+    padding: 5px 25px;
+}
+.continueReadings{
+    padding: 20px 0;
+}
+.conRedTitle{
+    width: max-content;
+    height: auto;
+    padding: 5px 0;
+}
+
+/*conScroller*/
+.conScroller{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.continueBookCard{
+    min-width: 300px;
+    max-width: 300px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    overflow: hidden;
+}
+.conBookCover{
+    flex: .8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cover{
+    width: 55px;
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    overflow: hidden;
+}
+.cover img{
+    object-fit: cover;
+}
+.conBookDetails{
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.conBookDetails p{
+    font-size: var(--fontSize-base);
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.conBookDetails .meta{
+    font-size: var(--fontSize-meta);
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    color: #fff;
+}
+.conBookDetails .meta.progression{
+    color: #fff;
+}
+
+
+/*top--picks*/
+.top--picks{
+    width: 100%;
+    height: auto;
+    padding: 40px 5px;
+    padding-bottom: 30px;
+}
+.topPicksTitle{
+    padding: 0 3px;
+}
+
+.picks{
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 40px;
+    scroll-behavior: smooth;
+}
+.pickCard{
+    width: 300px;
+    height: 430px;
+    border-radius: 18px;
+    overflow: hidden;
+    flex-shrink: 0 !important;
+}
+.pickBanner{
+    width: 100%;
+    height: 80%;
+    padding: 20px 10px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pickBanner img{
+    object-fit: contain;
+}
+.pickContext{
+    width: 100%;
+    height: 20%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+.pickContext h3{
+    font-size: var(--fontSize-base);
+    font-weight: 600;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.pickContext p{
+    font-size: var(--fontSize-meta);
+    font-weight: 400;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+
+/* Mobile devices (usually up to 767px) */
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    #home{
+        padding: 5px 15px;
+    }
+    .conScroller{
+        padding: 10px 2px;
+    }
+
+    .top--picks{
+        padding: 10px 0px;
+    }
+    .picks{
+        padding: 15px 0px;
+        padding-bottom: 0;
+        gap: 30px;
+    }
+    .pickCard{
+        width: 100%;
+        border-radius: 20px;
+    }
+}

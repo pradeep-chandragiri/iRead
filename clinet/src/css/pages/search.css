@@ -1,0 +1,227 @@
+#search{
+    padding: 20px 25px;
+}
+
+.searchBarPosition{
+    width: 100%;
+    height: auto;
+    padding: 25px 0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-bg-alt);
+}
+
+.searchBar{
+    width: 70%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.searchBar input{
+    width: calc(100% - 60px);
+    height: 100%;
+    padding: 0 15px;
+    font-size: var(--fontSize-base);
+}
+.searchButton{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultLayout{
+    width: 12%;
+    height: 60px;
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.resultLayout .tab{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.resultLayout .tab:first-child{
+    border-right: 1px solid var(--color-bg-alt);
+}
+.resultLayout .tab.active{
+    color: var(--accent-blue);
+}
+
+/*ListView*/
+.ListView{
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ListCard{
+    width: calc((100% - 10px) / 2);
+    height: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-bg-alt);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.ListCard:last-child{
+    border: none;
+}
+.ListCard:hover{
+    background-color: var(--color-bg-alt);
+}
+
+.ListCardLayout{
+    width: calc(100%);
+    display: flex;
+    align-items: center;
+}
+
+.ListCardImage{
+    width: auto;
+    height: auto;
+    padding: 20px 30px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ListCardCover{
+    width: 145px;
+    height: 192px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--color-bg);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    overflow: hidden;
+}
+.ListCardCover img{
+    object-fit: contain;
+}
+
+.ListCardDetails{
+    width: calc(100% - 200px);
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ListCardDetails h2{
+    font-size: calc(var(--fontSize-lg) - 5px);
+    line-height: 1.5;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.ListCardDetails p{
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.ListCardDetails .meta{
+    margin-top: 10px;
+    font-size: var(--fontSize-meta);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.ListCardAction{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile devices (usually up to 767px) */
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    #search{
+        padding: 10px 0px;
+    }
+    .searchBarPosition{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+    .searchBar{
+        width: 100%;
+        border-radius: 12px;
+        height: 45px;
+    }
+    .searchBar input{
+        width: 100%;
+    }
+    .searchButton{
+        display: none;
+    }
+
+    .ListView{
+        padding: 0px;
+    }
+    .ListCard{
+        width: 100%;
+        cursor: default;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .resultLayout{
+        width: 100%;
+        height: 50px;
+        justify-content: end;
+        box-shadow: unset;
+    }
+    .resultLayout .tab{
+        width: 60px;
+        cursor: default;
+    }
+    .resultLayout .tab:first-child {
+        border-right: none;
+    }
+
+    .ListCardImage{
+        padding: 10px 5px;
+    }
+    .ListCardCover{
+        width: 110px;
+        height: 160px;
+    }
+    .ListCardDetails{
+        width: 100%;
+    }
+    .ListCardDetails p {
+        -webkit-line-clamp: 2;
+    }
+}

@@ -1,0 +1,135 @@
+.LoginWrapper{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+}
+
+/*AppInfo*/
+.AppInfo{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appInfoContainer{
+    width: 80%;
+    height: 78%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--color-bg);
+}
+.iReaderLogo{
+    width: 100%;
+    height: 100px;
+}
+.LogoIcon{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.AppDescLinkWrapper{
+    padding: 0px 10px;
+}
+.iReaderDescription,
+.iReaderLinks{
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+}
+.iReaderDescription h1{
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.iReaderDescription p{
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.iReaderLinks{
+    padding: 5px 0;
+    display: flex;
+    gap: 10px;
+}
+.LinkBtn{
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    background-color: var(--color-bg);
+}
+.LinkBtn img{
+    object-fit: contain;
+}
+
+.iReaderPaT{
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+}
+.iReaderPaT .meta{
+    line-height: 1.4;
+    color: var(--color-text-muted);
+}
+
+/*ClerLoginComponent*/
+.ClerLoginComponent{
+    flex: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+}
+.cl-internal-p8bmz4{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+
+/* Tablets (usually between 768px and 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS rules for tablets */
+    .LoginWrapper{
+        flex-direction: column;
+        height: auto;
+        scroll-snap-type: y mandatory;
+    }
+    .AppInfo,
+    .ClerLoginComponent{
+        flex: unset;
+        height: 100vh !important;
+        scroll-snap-align: start;
+    }
+}
+
+/* Mobile devices (usually up to 767px) */
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    .LoginWrapper{
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+        scroll-snap-type: y mandatory !important;
+    }
+    .AppInfo,
+    .ClerLoginComponent{
+        flex: unset;
+        height: 100dvh !important;
+        scroll-snap-align: start !important;
+    }
+    .appInfoContainer{
+        width: 100%;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+    .LinkBtn{
+        width: 100%;
+    }
+}
