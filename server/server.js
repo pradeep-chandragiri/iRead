@@ -15,7 +15,6 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.send('API Working...')
 })
-
 app.post('/clerk', clerkWebhooks)
 
 //PORT

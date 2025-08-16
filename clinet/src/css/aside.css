@@ -65,6 +65,9 @@ aside{
 .MainNavigation a.active .MN--item{
     background-color: var(--color-bg-alt);
 }
+.MainNavigation a .MN--item .meta{
+    font-size: calc(var(--fontSize-base) - 1px);
+}
 .MainNavigation a.active .mnText .meta{
     font-weight: 600;
 }
