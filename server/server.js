@@ -21,7 +21,7 @@ app.use(clerkMiddleware())
 app.get('/', (req, res) => {
     res.send('API Working...')
 })
-app.post('/user', clerkWebhooks)
+app.post('/clerk', clerkWebhooks)
 app.use('/api/admin', adminRouter)
 
 //PORT
